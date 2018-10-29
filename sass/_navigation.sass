@@ -1,5 +1,5 @@
 .sidebar
-  background-image: url('../images/bridge.jpg')
+  // background-image: url('../images/bridge.jpg')
   background-repeat: no-repeat
   background-position: center
   background-size: auto
@@ -16,6 +16,7 @@
   background-color: #fff
   position: fixed
   // box-shadow: 0 1px 25px 0 rgba(31, 35, 46, 0.35)
+  margin: 0
 
 header
   .about
@@ -25,7 +26,18 @@ header
     p
       font-size: 18px
 
-section
+section.menu
+  margin: 10px 0
+  ul.menu-list
+    list-style: none
+    padding-left: 0
+    font-size: 18px
+    li
+      a
+        color: $fc
+        &:hover
+          text-decoration: none
+          color: $dark-gray
 
 footer
   .contact
