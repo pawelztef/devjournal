@@ -60,6 +60,12 @@ header
         &:hover
           text-decoration: none
           color: $dark-gray
+        @media screen and (max-width: $screen-sm-min)
+          color: $fc
+          &:hover
+            text-decoration: none
+            color: lighten($dark-gray, 20%)
+
   @media screen and (max-width: $screen-sm-min)
     visibility: hidden
     position: fixed
@@ -67,8 +73,8 @@ header
     width: 100%
     top: 0
     margin: 0
-    background-color: green
-    transition: all 1s ease-in-out
+    background-color: rgba(51, 51, 51, 0.91)
+    transition: all .7 ease-in-out
     opacity: 0
 
 .menu-open
@@ -100,3 +106,9 @@ footer
 
   .copyright
     font-size: 18px
+
+@media screen and (max-width: $screen-sm-min)
+  .fas.fa-bars
+    color: $fc
+    font-size: 22px
+  .fas.fa-bars.menu-open
