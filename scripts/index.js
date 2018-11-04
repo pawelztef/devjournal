@@ -1,11 +1,22 @@
 $(document).ready(function() {
-  menuToggle(); 
+  openNav();
+  closeNav();
 });
 
-let menuToggle = function() {
-  let target = $("section.menu");
-  let burger = $(".burger");
-  burger.on("click", function() {
-    target.toggleClass("menu-open");
+let openNav = function() {
+  let openBtn = $(".burger");
+  let target = $(".overlay");
+  openBtn.on('click', function() {
+    target.css('width', '100%'); 
+    openBtn.css('visibility', 'hidden');
   });
-};
+}
+let closeNav = function() {
+  let closeBtn = $(".closeBtn");
+  let openBtn = $(".burger");
+  let target = $(".overlay");
+  closeBtn.on('click', function() {
+    target.css('width', '0%'); 
+    openBtn.css('visibility', 'initial');
+  });
+}
