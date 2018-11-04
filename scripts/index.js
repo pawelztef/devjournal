@@ -1,38 +1,40 @@
 $(document).ready(function() {
-  openNav();
-  closeNav();
-  swapHover();
+  toggleMenu();
 });
 
-let openNav = function() {
+
+
+let toggleMenu = function() {
+
   let openBtn = $('.burger');
+  let closeBtn = $('.closeBtn');
   let target = $('.overlay');
+
   openBtn.on('click', function() {
     target.css('width', '100%'); 
     openBtn.css('visibility', 'hidden');
+    closeBtn.css('display', 'initial');
   });
-}
-let closeNav = function() {
-  let closeBtn = $('.closeBtn');
-  let openBtn = $('.burger');
-  let target = $('.overlay');
-  closeBtn.on('click', function() {
+
+  closeBtn.on('click', function(e) {
+    e.preventDefault();
     target.css('width', '0%'); 
     openBtn.css('visibility', 'initial');
+    closeBtn.css('display', 'none');
   });
-}
-let swapHover = function() {
+
   $('.menu-list a').on('click', function(e) {
+    e.preventDefault();
     let link = $(this);
     if(link.hasClass('hover-active')) {
-      console.log('one');
-      return true;
     } else {
       link.addClass('hover-active');
       $('a').not(this).removeClass('hover-active');
-      console.log('two');
-      console.log($('a').not(this));
-      return true;
     }
+    window.setTimeout(function() {
+      target.css('width', '0%'); 
+      openBtn.css('visibility', 'initial');
+      closeBtn.css('display', 'none');
+    }, 100);
   });
 }
