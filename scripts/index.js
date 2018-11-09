@@ -1,6 +1,6 @@
 $(document).ready(function() {
   toggleMenu();
-
+  appendFooter();
 });
 
 let toggleMenu = function() {
@@ -31,3 +31,20 @@ let toggleMenu = function() {
   });
 }
 
+
+let appendFooter = function() {
+  $(document).on('change', function() {
+    console.log('hello');
+    let target = $(window).width() >= 768 ? 'aside.sidebar' : 'div.wrp';
+    $(target).append('<footer> ' + 
+      '<section class="contact"> ' + 
+      '<a href="#" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>' + 
+      '<a href="#" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>' +
+      '<a href="#" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>' + 
+      '<a href="#" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>' + 
+      '<a href="mailto:example.pavel@blog.com"><i></i></a>' +
+      '</section>' + 
+      '<div class="copyright"> <p>2018 © Pawel Stefaniak</p> </div>' +
+      '</footer>');
+  });
+}

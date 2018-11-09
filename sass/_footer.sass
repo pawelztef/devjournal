@@ -1,26 +1,22 @@
 footer
   .contact
-    ul
-      margin: 0
-      padding: 0
-      list-style: none
-      li
-        display: inline-block
-        margin-left: 10px
-        &:first-child
-          margin-left: 0px
-        a
-          color: $fc
-          display: block
-          padding: 3px
-          font-size: 30px
-          transition: all 350ms cubic-bezier(0.13, 0.43, 0.54, 1.82)
-          &:hover
-            color: $dark-gray
-            transform: scale(1.1)
-  @media screen and (max-width: $screen-sm-min)
-    display: none
+    display: flex
+    justify-content: space-between
+    a
+      color: $fc
+      display: block
+      padding: 3px
+      font-size: 30px
+      transition: all 350ms cubic-bezier(0.13, 0.43, 0.54, 1.82)
+      &:hover
+        color: $dark-gray
+        transform: scale(1.1)
+    @media screen and (max-width: $screen-sm-min)
+      display: none
 
   .copyright
-    font-size: 18px
+    font-size: 16px
+    @media screen and (max-width: $screen-sm-min)
+      text-align: center
+
 
