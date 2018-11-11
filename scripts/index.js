@@ -33,9 +33,9 @@ let toggleMenu = function() {
 
 
 let appendFooter = function() {
-  $(document).on('change', function() {
-    console.log('hello');
+  $(window).on('change load resize',  function() {
     let target = $(window).width() >= 768 ? 'aside.sidebar' : 'div.wrp';
+    $('footer').remove();
     $(target).append('<footer> ' + 
       '<section class="contact"> ' + 
       '<a href="#" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>' + 
