@@ -6,13 +6,13 @@
   margin: 5px
   display: flex
   flex-direction: column
-  justify-content: flex-end
+  justify-content: space-between
   top: 0
   left: 0
   bottom: 0
   height: 100%
-  width: 20%
-  padding: 20px 10px
+  width: 30%
+  padding: 60px
   background-color: #fff
   position: fixed
   margin: 0
@@ -26,16 +26,18 @@
 header
   .about
     .brand
-      font-size: 34px
-      font-weight: bold
+      font-size: 45px
+      font-weight: 500
       @media screen and (max-width: $screen-sm-min)
-        font-size: 28px
+        font-size: 25px
         margin-left: 10px
         margin-top: 10px
     p
-      font-size: 18px
+      margin-top: 30px
+      font-size: 20px
+      font-weight: 300
       @media screen and (max-width: $screen-sm-min)
-        font-size: 16px
+        font-size: 18px
         margin-left: 10px
         margin-bottom: 0px
   .burger
@@ -49,11 +51,12 @@ header
       margin: 20px
 
 .menu
-  margin: 10px -10px
+  margin-top: 30px 
   ul
     list-style: none
     padding-left: 0
     font-size: 22px
+    margin-left: -10px
     li
       padding: 2px 0
       &:hover
@@ -68,7 +71,7 @@ header
       display: none
 
 .active
-  font-weight: bold
+  font-weight: 600
 
 
 .overlay
