@@ -61,8 +61,8 @@
           <h1 class="site-title"><a href="portfolio.html">Portfolio</a></h1>
         </header>
         <section class="port-wrp">
-          <div class="row">
-            <div class="col-md-4 col-sm-6"> 
+          <div class="grid">
+            <div class="grid-item"> 
               <div class="card-content">
                 <div class="card-img">
                   <img src="images/jadore-la-france-thumb.jpg" alt="">
@@ -76,7 +76,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6"> 
+            <div class="grid-item"> 
               <div class="card-content">
                 <div class="card-img">
                   <img src="images/jadore-la-france-thumb.jpg" alt="">
@@ -90,7 +90,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6"> 
+            <div class="grid-item"> 
               <div class="card-content">
                 <div class="card-img">
                   <img src="images/jadore-la-france-thumb.jpg" alt="">
@@ -110,8 +110,10 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
       <script src="scripts/index.js"></script>
       <script>
+$('grid-item').masonry();
       </script>
   </body>
 </html>
