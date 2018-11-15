@@ -1,6 +1,13 @@
 $(document).ready(function() {
   toggleMenu();
   appendFooter();
+  $('.grid').masonry({
+    // options
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-item',
+    percentPosition: true,
+    gutter: 20
+  });
 });
 
 let toggleMenu = function() {
