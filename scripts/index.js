@@ -42,7 +42,7 @@ let appendFooter = function() {
       '<a href="#" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>' +
       '<a href="#" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>' + 
       '<a href="#" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>' + 
-      '<a href="mailto:example.pavel@blog.com"><i></i></a>' +
+      '<a href="mailto:example.pavel@blog.com"><i class="fas fa-envelope-square"></i></a>' +
       '</section>' + 
       '<div class="copyright"> <p>2018 © Pawel Stefaniak</p> </div>' +
       '</footer>');

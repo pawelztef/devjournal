@@ -28,6 +28,8 @@ header
     .brand
       font-size: 45px
       font-weight: 500
+      @media screen and (max-width: $screen-md-min)
+        font-size: 30px
       @media screen and (max-width: $screen-sm-min)
         font-size: 25px
         margin-left: 10px
@@ -36,10 +38,14 @@ header
       margin-top: 30px
       font-size: 20px
       font-weight: 300
+      @media screen and (max-width: $screen-md-min)
+        font-size: 18px
+        margin-top: 20px
       @media screen and (max-width: $screen-sm-min)
         font-size: 18px
         margin-left: 10px
-        margin-bottom: 0px
+        margin-bottom: 10px
+        margin-top: 0
   .burger
     display: none
   @media screen and (max-width: $screen-sm-min)
@@ -51,22 +57,23 @@ header
       margin: 20px
 
 .menu
-  margin-top: 30px 
+  margin-top: 40px 
   ul
     list-style: none
     padding-left: 0
     font-size: 22px
     margin-left: -10px
+    @media screen and (max-width: $screen-md-min)
+      font-size: 18px
     li
-      padding: 2px 0
+      padding: 7px 0
       &:hover
-        background-color: lighten($dark-gray, 70%)
       a
         color: $fc
         padding: 5px 10px
-        &:hover
+        &:hover, &:focus
           text-decoration: none
-          color: darken($dark-gray, 30%)
+          color: lighten($fc, 20%) 
     @media screen and (max-width: $screen-sm-min)
       display: none
 
