@@ -4,7 +4,7 @@
   .grid-cont
     display: grid
     grid-template-columns: repeat(5, 1fr) 
-    grid-template-rows: repeat(12, 1fr)
+    grid-template-rows: repeat(12, 100px)
     grid-gap: 20px
     height: 100%
   .grid-it
@@ -14,17 +14,17 @@
     font-size: 30px
     text-align: center
     &.small
-      grid-row: span 2
       grid-column: span 1
+      grid-row: span 2
     &.medium
+      grid-column: span 2
       grid-row: span 3
-      grid-column: span 2
     &.large
-      grid-row: span 4
       grid-column: span 3
+      grid-row: span 4
     &.tall
-      grid-row: span 5
       grid-column: span 2
+      grid-row: span 5
     &.wide
       grid-row: span 3
       grid-column: span 3
