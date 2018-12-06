@@ -12,14 +12,16 @@ $screen-collapse-min: 832px
 %masonry-grid-shared
   display: grid
   grid-template-columns: repeat(6, 1fr) 
-  grid-template-rows: repeat(9, auto)
+  grid-template-rows: repeat(9, 100px)
   grid-gap: 20px
-  height: 100vh
+  min-height: 100vh
 
 %mosonry-grid__item
   background-color: white
   text-align: center
   position: relative
+  border: 1px solid lightblue
+  overflow: hidden
   img
     width: 100%
     display: block
