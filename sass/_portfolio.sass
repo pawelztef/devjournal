@@ -122,40 +122,27 @@ a.btn-card
 
 
 .portfolio
-  .grid-cont
-    display: grid
-    grid-template-columns: repeat(6, 1fr) 
-    grid-template-rows: repeat(9, 100px)
-    grid-gap: 20px
-    height: 100%7
+  .masonry-grid--portfolio
+    @extend %masonry-grid-shared
+
+  .masonry-grid__item--small
+    @extend %mosonry-grid__item
+    grid-column: span 3
+    grid-row: span 3
     @media screen and (max-width: $screen-md-min)
-    grid-template-rows: repeat(7, 100px)
-  .grid-it
-    background-color: white
-    border: 1px solid black
-    padding: 20px
-    font-size: 30px
-    text-align: center
-    &.small
-      grid-column: span 3
-      grid-row: span 1
-      @media screen and (max-width: $screen-md-min)
-    &.medium
-      grid-column: span 3
-      grid-row: span 2
-      @media screen and (max-width: $screen-md-min)
-    &.large
-      grid-column: span 3
-      grid-row: span 3
-      @media screen and (max-width: $screen-md-min)
-    &.tall
-      grid-column: span 3
-      grid-row: span 5
-      @media screen and (max-width: $screen-md-min)
-    &.wide
-      grid-column: span 3
-      grid-row: span 4
-      @media screen and (max-width: $screen-md-min)
+
+  .masonry-grid__item--medium
+    @extend %mosonry-grid__item
+    grid-column: span 3
+    grid-row: span 5
+    @media screen and (max-width: $screen-md-min)
+
+  .masonry-grid__item--large
+    @extend %mosonry-grid__item
+    grid-column: span 3
+    grid-row: span 7
+    @media screen and (max-width: $screen-md-min)
+
 
 
   
