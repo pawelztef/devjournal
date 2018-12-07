@@ -25,8 +25,7 @@ $screen-collapse-min: 832px
   img
     width: 100%
     display: block
-  .img-overlay
-    font-size: 24px
+  .masonry-grid__overlay
     position: absolute
     display: block
     top: 0
@@ -35,6 +34,16 @@ $screen-collapse-min: 832px
     right: 0
     height: 100%
     width: 100%
-    background-color: lightblue
+    background-color: blue
     opacity: 0
+    transition: .8s ease
+    display: flex
+    align-items: center
+    justify-content: center
+    &:hover 
+      opacity: 1
+    .masonry-grid__overlay-text
+      font-size: 24px
+      color: white
+
 
