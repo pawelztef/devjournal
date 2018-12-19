@@ -1,32 +1,72 @@
 .journal
-  .wrapper
-    padding: 1em
-  .grid-cont
-    display: grid
+  h2
+    // font-size: 1.5em
+    font-size: 1.5em
+    font-weight: 600
+    margin: 15px 0 5px
+  .masonry-grid--journal
+    @extend %masonry-grid-shared
     grid-template-columns: repeat(5, 1fr) 
-    grid-template-rows: repeat(12, 100px)
-    grid-gap: 20px
-    height: 100%
-  .grid-it
+    grid-template-rows: repeat(9, 100px)
+    div > .masonry-grid__link
+      &:hover, &:focus
+        text-decoration: none
+
+  .masonry-grid__item--small
+    @extend %mosonry-grid__item
+    grid-column: span 3
+    grid-row: span 2
+    .masonry-grid__link > 
+    .masonry-grid__journal-feature
+      display: flex
+      flex-direction: row
+
+  .masonry-grid__item--medium
+    @extend %mosonry-grid__item
+    grid-column: span 2
+    grid-row: span 3
+
+  .masonry-grid__item--large
+    @extend %mosonry-grid__item
+    grid-column: span 3
+    grid-row: span 4
+
+  .masonry-grid__item--tall
+    @extend %mosonry-grid__item
+    grid-column: span 2
+    grid-row: span 5
+
+  .masonry-grid__item--wide
+    @extend %mosonry-grid__item
+    grid-column: span 3
+    grid-row: span 3
+
+.masonry-grid__journal-feature
+  display: flex
+  flex-direction: column
+  height: 100%
+  .masonry-grid__feature-header
+    background-color: #dfdfdf
+    flex: 1.5
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: start
+    padding: 20px 40px
+    .feature-header__category
+      text-transform: uppercase
+      font-size: 1em 
+      font-weight: 400
+    .feature-header__title
+      text-align: left
+  .masonry-grid__feature-text
     background-color: white
-    border: 1px solid black
-    padding: 20px
-    font-size: 30px
-    text-align: center
-    &.small
-      grid-column: span 1
-      grid-row: span 2
-    &.medium
-      grid-column: span 2
-      grid-row: span 3
-    &.large
-      grid-column: span 3
-      grid-row: span 4
-    &.tall
-      grid-column: span 2
-      grid-row: span 5
-    &.wide
-      grid-row: span 3
-      grid-column: span 3
+    flex: 2
+    overflow: hidden
+    text-overflow: ellipsis
+    padding: 20px 40px
+    text-align: left
+    // display: flex
+    // align-items: center
 
 
